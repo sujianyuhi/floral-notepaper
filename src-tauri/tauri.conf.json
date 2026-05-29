@@ -35,7 +35,19 @@
   },
   "bundle": {
     "active": true,
-    "targets": ["app", "dmg", "nsis"],
+    "targets": ["app", "dmg", "nsis", "deb", "rpm", "appimage"],
+    "linux": {
+      "deb": {
+        "depends": []
+      },
+      "rpm": {
+        "epoch": 0,
+        "release": "1"
+      },
+      "appimage": {
+        "bundleMediaFramework": false
+      }
+    },
     "macOS": {
       "minimumSystemVersion": "15.0"
     },
